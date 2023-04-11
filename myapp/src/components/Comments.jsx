@@ -1,39 +1,36 @@
 import React from 'react'
-import InputBase from '@mui/material/InputBase';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
-import { Box, Typography } from '@mui/material';
-import AccountCircle from '@mui/icons-material/AccountCircle';
+import  Box  from '@mui/material/Box';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import  Typography  from '@mui/material/Typography';
+import { Card, CardMedia, Stack } from '@mui/material';
+import Badge from '@mui/material/Badge';
+import friends from '../assests/friends.webp'
+
+
 
 function Comments() {
   return (
     <>
-    <Box sx={{backgroundColor:'grey',height:'100%',width:'100%',display:'flex',flexDirection:'column'}}>
-    <Box sx={{margin:'10px'}}>
-      <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-        <SearchIcon />
-      </IconButton>
-      <InputBase
-        sx={{ ml: 1, flex: 1 }}
-        placeholder="Search Google Maps"
-        inputProps={{ 'aria-label': 'search google maps' }}
+    <Stack flex={1}  sx={{maxWidth:'100%',borderRadius:'0 20px 20px 0',backgroundColor:'#e6e6e6',margin:'5px',width:'100%'}}>
+    <Box sx={{display:'flex',flexDirection:'column',position:'fixed'}}>
+    <Box sx={{display:'flex',flexDirection:'row',padding:'10px',color:'black',marginLeft:'5px',justifyContent:'space-evenly',right:'5px',backgroundColor:'#e6e6e6'}}>
+      <Badge badgeContent={4} color="secondary">
+        <NotificationsNoneIcon color="action" />
+      </Badge>
+      <AccountCircleRoundedIcon sx={{border:'2px #808080 solid',borderRadius:'25px'}}/>
+      <Typography>GokulSarah</Typography>
+    </Box>
+    <Card >
+      <CardMedia
+        component="img"
+        alt="green iguana"
+        image={friends}
+        sx={{padding:'10px',borderRadius:'20px'}}
       />
-      </Box>
-      <Box sx={{display:'flex',flexDirection:'column',margin:'19px'}}>
-        <Typography marginBottom='9px'>Your Group</Typography>
-       <Box  sx={{display:'flex',flexDirection:'row',marginBottom:'9px'}}> <AccountCircle /> <Typography>Figma Community</Typography></Box>
-       <Box  sx={{display:'flex',flexDirection:'row',marginBottom:'9px'}}> <AccountCircle /> <Typography>Sketch Community</Typography></Box>
-
-      </Box>
-
-      <Box sx={{display:'flex',flexDirection:'column',margin:'19px'}}>
-        <Typography marginBottom='9px'>Friends </Typography>
-       <Box  sx={{display:'flex',flexDirection:'row',marginBottom:'9px',justifyContent:'space-between'}}> <AccountCircle /> <Typography>Figma Community</Typography><Typography>Time</Typography> </Box>
-       <Box  sx={{display:'flex',flexDirection:'row',marginBottom:'9px',justifyContent:'space-between'}}> <AccountCircle /> <Typography>Sketch Community</Typography><Typography>Online</Typography></Box>
-
-      </Box>
-
-      </Box>
+      </Card>
+    </Box>
+      </Stack>
     </>
   )
 }

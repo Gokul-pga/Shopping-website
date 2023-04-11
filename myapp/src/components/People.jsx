@@ -2,39 +2,48 @@ import React from 'react'
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import { Box, Typography } from '@mui/material';
-import AccountCircle from '@mui/icons-material/AccountCircle';
+import { Box, Stack, Typography } from '@mui/material';
+import Template from './Template';
 
 
 function People() {
   return (
     <>
-    <Box sx={{backgroundColor:'grey',height:'100%',width:'100%',display:'flex',flexDirection:'column'}}>
-    <Box sx={{margin:'10px'}}>
-      <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-        <SearchIcon />
-      </IconButton>
-      <InputBase
-        sx={{ ml: 1, flex: 1 }}
-        placeholder="Search Google Maps"
-        inputProps={{ 'aria-label': 'search google maps' }}
-      />
-      </Box>
-      <Box sx={{display:'flex',flexDirection:'column',margin:'19px'}}>
-        <Typography marginBottom='9px'>Your Group</Typography>
-       <Box  sx={{display:'flex',flexDirection:'row',marginBottom:'9px',width:'170px',justifyContent:'space-between'}}> <AccountCircle /> <Typography>Figma Community</Typography></Box>
-       <Box  sx={{display:'flex',flexDirection:'row',marginBottom:'9px',width:'170px',justifyContent:'space-between'}}> <AccountCircle /> <Typography>Sketch Community</Typography></Box>
+      <Stack flex={1} sx={{ backgroundColor: '#e6e6e6', borderRadius: '20px 0 0 20px', margin: '5px' }}>
+       <Box sx={{position:'fixed' }}>
+        <Box sx={{ margin: '10px' }}>
+          <IconButton type="button" sx={{ p: '5px' }} aria-label="search">
+            <SearchIcon />
+          </IconButton>
+          <InputBase
+            sx={{ ml: 0, flex: 1 }}
+            placeholder="Search Google Maps"
+            inputProps={{ 'aria-label': 'search google maps' }}
+          />
+        </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', margin: '15px' }}>
+          <Typography marginBottom='9px' fontWeight='bold' color='#8c8c8c'>YOUR GROUP</Typography>
+          <Template name='Figam Community' />
+          <Template name='Sketch Community' />
 
-      </Box>
 
-      <Box sx={{display:'flex',flexDirection:'column',margin:'19px'}}>
-        <Typography marginBottom='9px'>Friends </Typography>
-       <Box  sx={{display:'flex',flexDirection:'row',marginBottom:'9px',width:'250px',justifyContent:'space-between'}}> <AccountCircle /> <Typography>Sketch Community</Typography><Typography>Online</Typography></Box>
-       <Box  sx={{display:'flex',flexDirection:'row',marginBottom:'9px',width:'250px',justifyContent:'space-between'}}> <AccountCircle /> <Typography>Figma Community</Typography><Typography>Time</Typography> </Box>
+        </Box>
 
-      </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', margin: '15px' }}>
+          <Typography marginBottom='9px' fontWeight='bold' color='#8c8c8c'>CHATS </Typography>
+          <Template name='Sarah' time='10 min' />
+          <Template name='GokulAnand' time='Online' />
+          <Template name='Jerin' time='30 min' />
+          <Template name='Eraiyarul' time='15 min' />
+          <Template name='Nishanth' time='Online' />
+          <Template name='Mahesh' time='Just now' />
+          <Template name='Deva' time='Online' />
 
-      </Box>
+
+
+        </Box>
+        </Box>
+      </Stack>
     </>
   )
 }

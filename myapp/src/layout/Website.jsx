@@ -1,17 +1,21 @@
 import React from 'react'
-import People from '../components/People'
-import Comments from '../components/Comments'
-import Layout from './Layout'
-import { Box } from '@mui/material'
+import Layout from './Layout';
+import Navbar from '../components/Navbar';
+import ProductCard from '../components/ProductCard';
+
 
 function Website() {
+
   return (
     <>
-    <Box sx={{display:'flex',flexDirection:'row',height:'100vh',width:'100%',backgroundColor:'white',justifyContent:'space-between'}}>
-    <People/>
-    <Layout/>
-    <Comments/>
-    </Box>
+    <Layout>
+      <Navbar/>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+    </Layout>
     </>
   )
 }
