@@ -10,28 +10,28 @@ import { Box, IconButton } from '@mui/material';
 function Navbar() {
     const navLists = [
         {
-          title: <HomeOutlinedIcon sx={{ fontSize: '30px', color: '#4dd2ff', backgroundColor: '#4d4dff', borderRadius: '5px', padding: '3px' }} />,
+          title: <HomeOutlinedIcon sx={{ fontSize: '30px', borderRadius: '5px', padding: '3px' ,'&:hover':{ color: '#4dd2ff', backgroundColor: '#4d4dff',transform:"scale(1.2)",transition:'.3s'}}} />,
           to: ''
         },
         {
-          title: <GroupsOutlinedIcon sx={{ fontSize: '30px', color: '#ffffff' }} />,
+          title: <GroupsOutlinedIcon sx={{ fontSize: '30px', borderRadius: '5px', padding: '3px' ,'&:hover':{ color: '#4dd2ff', backgroundColor: '#4d4dff',transform:"scale(1.2)",transition:'.3s'}}}/>,
           to: ''
         },
         {
-          title: <MessageOutlinedIcon sx={{ fontSize: '30px', color: '#ffffff' }} />,
+          title: <MessageOutlinedIcon sx={{ fontSize: '30px', borderRadius: '5px', padding: '3px' ,'&:hover':{ color: '#4dd2ff', backgroundColor: '#4d4dff',transform:"scale(1.2)",transition:'.3s'}}} />,
           to: ''
         },
         {
-          title: <AccessTimeOutlinedIcon sx={{ fontSize: '30px', color: '#ffffff' }} />
+          title: <AccessTimeOutlinedIcon sx={{ fontSize: '30px', borderRadius: '5px', padding: '3px' ,'&:hover':{ color: '#4dd2ff', backgroundColor: '#4d4dff',transform:"scale(1.2)",transition:'.3s'}}} />
           ,
           to: ''
         },
         {
-          title: <TourOutlinedIcon sx={{ fontSize: '30px', color: '#ffffff' }} />,
+          title: <TourOutlinedIcon sx={{ fontSize: '30px', borderRadius: '5px', padding: '3px' ,'&:hover':{ color: '#4dd2ff', backgroundColor: '#4d4dff',transform:"scale(1.2)",transition:'.3s'}}} />,
           to: ''
         },
         {
-          title: <SettingsOutlinedIcon sx={{ fontSize: '30px', color: '#ffffff' }} />,
+          title: <SettingsOutlinedIcon sx={{ fontSize: '30px', borderRadius: '5px', padding: '3px' ,'&:hover':{ color: '#4dd2ff', backgroundColor: '#4d4dff',transform:"scale(1.2)",transition:'.3s'}}} />,
           to: ''
         },
       ]
@@ -40,8 +40,8 @@ function Navbar() {
 
     <Box sx={{height:'80px',width:500,color:'black',alignItems:'center',display:'flex',justifyContent:'center',position:'fixed',borderRadius:'0 0 25px 25px'}}>
           <Box sx={{alignItems:'center',display:'flex',justifyContent:'space-between',height:'100%',width:'95%',backgroundColor:'#a6a6a6',borderRadius:'0 0 25px 25px'}} >
-          {navLists.map((nav) => {
-              return (<IconButton>{nav.title}</IconButton>)
+          {navLists.map((nav,index) => {
+              return (<IconButton key={index}>{nav.title}</IconButton>)
             })}
           </Box>
         </Box>

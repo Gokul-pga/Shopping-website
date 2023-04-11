@@ -9,8 +9,8 @@ import Template from './Template';
 function People() {
   return (
     <>
-      <Stack flex={1} sx={{ backgroundColor: '#e6e6e6', borderRadius: '20px 0 0 20px', margin: '5px' }}>
-       <Box sx={{position:'fixed' }}>
+      <Stack flex={1} sx={{  borderRadius: '20px 0 0 20px', margin: '5px' }}>
+       <Box sx={{position:'fixed' ,backgroundColor: '#e6e6e6'}}>
         <Box sx={{ margin: '10px' }}>
           <IconButton type="button" sx={{ p: '5px' }} aria-label="search">
             <SearchIcon />
