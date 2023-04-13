@@ -10,7 +10,7 @@ function People() {
   return (
     <>
       <Stack flex={1} sx={{  borderRadius: '20px 0 0 20px', margin: '5px' }}>
-       <Box sx={{position:'fixed' ,backgroundColor: '#e6e6e6'}}>
+       <Box sx={{position:'fixed' ,backgroundColor: '#e6e6e6',width:'350px',height:'100vh',borderRadius:'20px 0 0 20px'}}>
         <Box sx={{ margin: '10px' }}>
           <IconButton type="button" sx={{ p: '5px' }} aria-label="search">
             <SearchIcon />
