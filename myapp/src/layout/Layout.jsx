@@ -2,11 +2,13 @@ import  Box  from '@mui/material/Box';
 import React from 'react'
 import People from '../components/People'
 import Comments from '../components/Comments'
-import { Stack } from '@mui/material';
+import Stack from '@mui/material/Stack';
 import Navbar from '../components/Navbar';
 
 
+
 function Layout({children}) {
+
  
   return (
     <>
@@ -19,8 +21,13 @@ function Layout({children}) {
 
         <Box sx={{marginTop:50,width:'100%',height:100}}></Box>
         {children}
-        </Stack> 
-        <Comments />
+        </Stack > 
+       
+       <Comments />
+    
+        
+        
+        
         </Box>
     </>
   )

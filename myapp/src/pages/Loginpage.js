@@ -8,11 +8,11 @@ import {
 } from "@mui/material";
 import React from "react";
 import { useState } from "react";
-import bgimag from '../assests/image.webp'
 import { useNavigate } from "react-router-dom";
 import supabase from "../Supabase";
 
 export default function Loginpage() {
+
   const Navigate = useNavigate();
 
   const [open, setopen] = useState(false)
@@ -26,18 +26,18 @@ export default function Loginpage() {
 
   // signup page submithandler
   const handleSubmit = async() => {
+
     if (name !== "" && email !== "" && password !== "") {
-      const {  error } = await supabase.auth.signUp(
-        {
-          email: email,
-          password: password,
-        
-        }
-      )
+      const {error}=await supabase.auth.signUp({
+        email:email,
+        password:password
+      })
       if(error){
-       
-        console.log(error);
+        console.log("SIGNUP",error);
+      }else{
+        alert("For Conformation check your email")
       }
+
       setvalidator(false);
       setinputData({
         name: "",
@@ -51,7 +51,7 @@ export default function Loginpage() {
 
       // login page submithandler
   const submitHandler = async() => {
-    if (email == "ggg" && password == "ggg") {
+    if (email !=="" && password !== "") {
 
 const {error}=await supabase.auth.signInWithPassword({
   email:email,
@@ -60,10 +60,6 @@ const {error}=await supabase.auth.signInWithPassword({
 if(error){
   console.log("LOGIN",error);
 }
-
-
-
-
 
       setvalidator(false);
       setinputData({
@@ -77,8 +73,11 @@ if(error){
   };
 
   return (
+            // {!open?(<signin/>):(<Login/>)} ---- syntaxt for signin & login page in single js file
+            // {!comment? <icon/> : <Comment/>}
 
       <>
+
       {/* //login form */}
       {!open?(
       <>

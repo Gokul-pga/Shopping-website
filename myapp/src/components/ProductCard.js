@@ -1,9 +1,8 @@
-import { Box, Rating } from '@mui/material'
+import { Box, Rating, Stack } from '@mui/material'
 import React from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
@@ -13,14 +12,11 @@ function ProductCard({product}) {
   const {rate}=rating
   return (
     <>
-    <Box sx={{width:'95%',backgroundColor:'lavender',borderRadius:'20px 20px',alignItems:'center',justifyContent:'center',display:'flex'}}>
+    <Box sx={{width:'800px',backgroundColor:'lavender',borderRadius:'20px 20px',alignItems:'center',justifyContent:'center',display:'flex'}}>
       <Card sx={{boxShadow:'0 0 10px black'}}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        image={image}
-        sx={{padding:'10px',borderRadius:'20px',height:200,width:200}}
-      />
+     <Stack  sx={{borderRadius:'20px',height:300,width:"800px",justifyContent:'center',alignItems:'center'}}>
+       <img src={image} alt='loading...' style={{height:'95%',width:'50%'}}/>
+     </Stack>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
         {title}
