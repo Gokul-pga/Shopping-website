@@ -6,6 +6,7 @@ import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import TourOutlinedIcon from '@mui/icons-material/TourOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { Box, IconButton } from '@mui/material';
+import "animate.css"
 
 function Navbar() {
     const navLists = [
@@ -37,14 +38,15 @@ function Navbar() {
       ]
   return (
     <>
-
-    <Box sx={{height:'80px',width:500,color:'black',alignItems:'center',display:'flex',justifyContent:'center',position:'fixed',borderRadius:'0 0 25px 25px'}}>
+        <div className='animate__animated animate__zoomIn' style={{width:500,position:'fixed'}}>
+    <Box sx={{height:'80px',width:"100%",color:'black',alignItems:'center',display:'flex',justifyContent:'center',borderRadius:'0 0 25px 25px'}}>
           <Box sx={{alignItems:'center',display:'flex',justifyContent:'space-between',height:'100%',width:'95%',backgroundColor:'#a6a6a6',borderRadius:'0 0 25px 25px'}} >
           {navLists.map((nav,index) => {
               return (<IconButton key={index}>{nav.title}</IconButton>)
             })}
           </Box>
         </Box>
+        </div>
         
     </>
   )
