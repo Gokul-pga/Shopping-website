@@ -38,7 +38,7 @@ function Navbar() {
       ]
   return (
     <>
-        <div className='animate__animated animate__zoomIn' style={{width:500,position:'fixed'}}>
+        <div className='animate__animated animate__zoomIn' style={{width:500,position:'fixed', zIndex:10}}>
     <Box sx={{height:'80px',width:"100%",color:'black',alignItems:'center',display:'flex',justifyContent:'center',borderRadius:'0 0 25px 25px'}}>
           <Box sx={{alignItems:'center',display:'flex',justifyContent:'space-between',height:'100%',width:'95%',backgroundColor:'#a6a6a6',borderRadius:'0 0 25px 25px'}} >
           {navLists.map((nav,index) => {

@@ -13,7 +13,7 @@ function Layout({children}) {
   return (
     <>
 
-<Box sx={{ display: 'flex', flexDirection: 'row', width: '100%', backgroundColor: 'white', justifyContent: 'space-between', margin: '5px' }}>
+<Box sx={{ display: 'flex', flexDirection: 'row', width: '100%', backgroundColor: 'white', justifyContent: 'space-between' }}>
         <People />
        
         <Stack spacing={2} flex={2} sx={{alignItems:'center'}} >

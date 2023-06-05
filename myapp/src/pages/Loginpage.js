@@ -85,6 +85,8 @@ if(error){
       <>
       <Box
       sx={{
+        padding:"0",
+        margin:'0',
         height: "100vh",
         width: "100%",
         backgroundImage: "linear-gradient(to bottom right,#1a53ff,#ff1aff)",
@@ -100,7 +102,7 @@ if(error){
           alignItems: "center",
           width: "800px",
           height: "600px",
-          backgroundColor:'#cccccc',
+          // backgroundColor:'#cccccc',
           padding: "20px",
         }}
       >
@@ -113,9 +115,8 @@ if(error){
             width: "350px",
             height:'350px',
             fontSize: "35px",
-            backgroundColor:'palegreen',
-            backgroundImage:
-            'url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.empuls.io%2Fbest-motivational-quotes-for-employees%2F&psig=AOvVaw1wRJzSi63AkCv4WIXmPH_g&ust=1681400016425000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLjBwafVpP4CFQAAAAAdAAAAABAE")',
+            // backgroundColor:'palegreen',
+            backgroundImage: "",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat"
           }}

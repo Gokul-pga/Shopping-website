@@ -11,9 +11,9 @@ function ProductCard({product}) {
   
   return (
     <>
-    <Box sx={{width:'800px',backgroundColor:'lavender',borderRadius:'20px 20px',alignItems:'center',justifyContent:'center',display:'flex'}}>
+    <Box sx={{width:'600px',backgroundColor:'red',borderRadius:'20px 20px',alignItems:'center',justifyContent:'center',display:'flex'}}>
       <Card sx={{boxShadow:'0 0 10px black'}}>
-     <Stack  sx={{borderRadius:'20px',height:300,width:"800px",justifyContent:'center',alignItems:'center'}}>
+     <Stack  sx={{borderRadius:'20px',height:250,width:"600px",justifyContent:'center',alignItems:'center'}}>
        <img src={product.image} alt='loading...' style={{height:'95%',width:'50%'}}/>
      </Stack>
       <CardContent>
